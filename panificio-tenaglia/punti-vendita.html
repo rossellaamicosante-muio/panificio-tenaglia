@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Panificio Tenaglia — Trova i nostri 3 punti vendita ad Orsogna e dintorni. Indirizzi, orari di apertura e mappa interattiva." />
+
+  <title>Punti Vendita & Orari — Panificio Tenaglia</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="assets/icons/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Stili progetto -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ════════════════════════
+       NAVBAR
+  ════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Navigazione principale">
+    <div class="container navbar__inner">
+
+      <a href="index.html" class="navbar__logo" aria-label="Panificio Tenaglia — Home">
+        <div class="navbar__logo-icon" aria-hidden="true">
+          <img src="assets/icons/logo-t.svg" alt="" />
+        </div>
+        <div class="navbar__logo-text">
+          Panificio Tenaglia
+          <span>Pane Artigianale</span>
+        </div>
+      </a>
+
+      <ul class="navbar__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="punti-vendita.html" class="active">Punti Vendita</a></li>
+        <li><a href="prenota.html">Prenota il Pane</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+
+      <a href="prenota.html" class="btn-primary navbar__cta">🛒 Prenota ora</a>
+
+      <button class="navbar__burger"
+              aria-label="Apri menu di navigazione"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu mobile -->
+  <nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
+    <a href="index.html">🏠 Home</a>
+    <a href="punti-vendita.html">📍 Punti Vendita & Orari</a>
+    <a href="prenota.html">🛒 Prenota il tuo Pane</a>
+    <a href="contatti.html">✉️ Contatti</a>
+  </nav>
+
+
+  <main>
+
+    <!-- ════════════════════════
+         PAGE HEADER
+    ════════════════════════ -->
+    <header class="page-header" aria-labelledby="pv-main-title">
+      <div class="container page-header__inner">
+        <p class="page-header__eyebrow">Dove trovarci</p>
+        <h1 class="page-header__title" id="pv-main-title">
+          Punti Vendita<br>& <em>Orari</em>
+        </h1>
+        <p class="page-header__sub">
+          Tre sedi sul territorio abruzzese. Seleziona quella più vicina a te
+          per vedere indirizzo, orari aggiornati e mappa.
+        </p>
+      </div>
+    </header>
+
+
+    <!-- ════════════════════════
+         TABS + PANNELLI
+    ════════════════════════ -->
+    <section class="pv-section" aria-label="Selezione punto vendita">
+      <div class="container">
+
+        <!-- Tabs -->
+        <div class="pv-tabs" role="tablist" aria-label="Scegli la sede">
+          <button class="pv-tab active"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="panel-sede-1"
+                  data-target="panel-sede-1"
+                  id="tab-sede-1">
+            📍 Sede 1 — Orsogna
+          </button>
+          <button class="pv-tab disabled"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="panel-sede-2"
+                  data-target="panel-sede-2"
+                  id="tab-sede-2">
+            📍 Sede 2 — Prossimamente
+          </button>
+          <button class="pv-tab disabled"
+                  role="tab"
+                  aria-selected="false"
+                  aria-disabled="true"
+                  id="tab-sede-3">
+            🔜 Sede 3 — Prossimamente
+          </button>
+        </div>
+
+
+        <!-- ══ PANNELLO SEDE 1 ══ -->
+        <div class="pv-panel active fade-up"
+             id="panel-sede-1"
+             role="tabpanel"
+             aria-labelledby="tab-sede-1">
+
+          <div class="pv-card">
+
+            <!-- Header -->
+            <div class="pv-card__header">
+              <div class="pv-card__num-name">
+                <div class="pv-card__num" aria-hidden="true">1</div>
+                <div>
+                  <h2 class="pv-card__name">Orsogna — Sede Principale</h2>
+                  <address class="pv-card__address">
+                    Via Raffaele Paolucci, 7 — 66036 Orsogna (CH)
+                  </address>
+                </div>
+              </div>
+              <span class="pv-card__status aperta">● Aperta</span>
+            </div>
+
+            <div class="pv-card__body">
+
+              <!-- Orari -->
+              <div>
+                <p class="orari__title">Orari di apertura</p>
+                <table class="orari__table" aria-label="Orari sede Orsogna">
+                  <tbody>
+                    <!-- data-giorno: 0=dom,1=lun,2=mar,3=mer,4=gio,5=ven,6=sab -->
+                    <tr data-giorno="1">
+                      <td>Lunedì</td>
+                      <td>04:30 – 13:00 &nbsp;·&nbsp; 17:00 – 19:00</td>
+                    </tr>
+                    <tr data-giorno="2">
+                      <td>Martedì</td>
+                      <td>04:30 – 13:00 &nbsp;·&nbsp; 17:00 – 19:00</td>
+                    </tr>
+                    <tr data-giorno="3">
+                      <td>Mercoledì</td>
+                      <td>04:30 – 13:00 &nbsp;·&nbsp; 17:00 – 19:00</td>
+                    </tr>
+                    <tr data-giorno="4">
+                      <td>Giovedì</td>
+                      <td>04:30 – 13:00 &nbsp;·&nbsp; 17:00 – 19:00</td>
+                    </tr>
+                    <tr data-giorno="5">
+                      <td>Venerdì</td>
+                      <td>04:30 – 13:00 &nbsp;·&nbsp; 17:00 – 19:00</td>
+                    </tr>
+                    <tr data-giorno="6">
+                      <td>Sabato</td>
+                      <td>04:30 – 13:00</td>
+                    </tr>
+                    <tr data-giorno="0">
+                      <td>Domenica</td>
+                      <td class="chiuso">Chiuso</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p style="font-size:0.78rem; color:var(--testo-light); margin-top:0.6rem; font-style:italic;">
+                  ⚠️ Gli orari potrebbero variare nei giorni festivi. Verificare sempre prima di recarsi.
+                </p>
+              </div>
+
+              <!-- Mappa -->
+              <div>
+                <p class="orari__title">Come raggiungerci</p>
+                <div class="pv-map-wrap">
+                  <div id="map-sede-1" class="pv-map" aria-label="Mappa sede Orsogna"></div>
+                </div>
+              </div>
+
+              <!-- CTA -->
+              <div class="pv-card__cta">
+                <a href="https://www.openstreetmap.org/directions?to=42.2197,14.2831"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-primary"
+                   aria-label="Ottieni indicazioni stradali per la sede di Orsogna">
+                  🗺️ Indicazioni stradali
+                </a>
+                <a href="prenota.html?sede=1"
+                   class="btn-outline"
+                   aria-label="Prenota il pane per questa sede">
+                  🛒 Prenota qui
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <!-- fine pannello sede 1 -->
+
+
+        <!-- ══ PANNELLO SEDE 2 ══ -->
+        <div class="pv-panel fade-up"
+             id="panel-sede-2"
+             role="tabpanel"
+             aria-labelledby="tab-sede-2">
+
+          <div class="pv-coming-soon">
+            <div class="pv-coming-soon__icon" aria-hidden="true">🔜</div>
+            <h2 class="pv-coming-soon__title">Seconda sede in arrivo</h2>
+            <p class="pv-coming-soon__sub">
+              Stiamo lavorando per portare il pane del Panificio Tenaglia ancora più vicino a te.<br>
+              Ti aspettiamo in negozio per raccontarti di persona tutte le novità!
+            </p>
+            <a href="contatti.html" class="btn-primary" style="margin-top:1.5rem; display:inline-flex;">
+              ✉️ Avvisami all'apertura
+            </a>
+          </div>
+
+        </div>
+        <!-- fine pannello sede 2 -->
+
+
+        <!-- ══ PANNELLO SEDE 3 — Prossimamente ══ -->
+        <div class="pv-panel fade-up"
+             id="panel-sede-3"
+             role="tabpanel"
+             aria-labelledby="tab-sede-3"
+             aria-hidden="true">
+
+          <div class="pv-coming-soon">
+            <div class="pv-coming-soon__icon" aria-hidden="true">🔜</div>
+            <h2 class="pv-coming-soon__title">Terza sede in arrivo</h2>
+            <p class="pv-coming-soon__sub">
+              Stiamo lavorando per portare il pane del Panificio Tenaglia ancora più vicino a te.<br>
+              Ti aspettiamo in negozio per raccontarti di persona tutte le novità!
+            </p>
+            <a href="contatti.html" class="btn-primary" style="margin-top:1.5rem; display:inline-flex;">
+              ✉️ Avvisami all'apertura
+            </a>
+          </div>
+
+        </div>
+        <!-- fine pannello sede 3 -->
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ════════════════════════
+       FOOTER
+  ════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Panificio Tenaglia</p>
+          <p class="footer__brand-tagline">
+            Pane artigianale dal cuore dell'Abruzzo.
+            Farina, acqua, lievito e passione — ogni giorno, dal mattino.
+          </p>
+        </div>
+        <div>
+          <p class="footer__col-title">Navigazione</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="punti-vendita.html">Punti Vendita & Orari</a></li>
+            <li><a href="prenota.html">Prenota il Pane</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contatti rapidi</p>
+          <ul class="footer__links" role="list">
+            <li>
+              <a href="https://wa.me/393406169211" target="_blank" rel="noopener noreferrer">
+                💬 WhatsApp
+              </a>
+            </li>
+            <li><a href="tel:+393406169211">📞 340 616 9211</a></li>
+            <li><a href="contatti.html">✉️ Modulo di contatto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Panificio Tenaglia — Orsogna (CH)</p>
+        <!-- <p>Sito realizzato con ❤️ da Rossella Amicosante — Corso Web Design 2025/26</p> -->
+        <p>Questo sito non utilizza cookie né raccoglie dati personali in modo automatico.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          ></script>
+
+  <!-- Scripts progetto -->
+  <script src="js/nav.js"></script>
+  <script src="js/mappa.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Panificio Tenaglia — Pane artigianale a Orsogna e dintorni. Tre punti vendita, orari aggiornati, prenotazione online." />
+
+  <title>Panificio Tenaglia — Pane Artigianale dal Cuore dell'Abruzzo</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="assets/icons/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Stili -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ════════════════════════
+       NAVBAR
+  ════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Navigazione principale">
+    <div class="container navbar__inner">
+
+      <a href="index.html" class="navbar__logo" aria-label="Panificio Tenaglia — Home">
+        <div class="navbar__logo-icon" aria-hidden="true">
+          <img src="assets/icons/logo-t.svg" alt="" />
+        </div>
+        <div class="navbar__logo-text">
+          Panificio Tenaglia
+          <span>Pane Artigianale</span>
+        </div>
+      </a>
+
+      <ul class="navbar__links" role="list">
+        <li><a href="index.html"         class="active">Home</a></li>
+        <li><a href="punti-vendita.html">Punti Vendita</a></li>
+        <li><a href="prenota.html">      Prenota il Pane</a></li>
+        <li><a href="contatti.html">     Contatti</a></li>
+      </ul>
+
+      <a href="prenota.html" class="btn-primary navbar__cta" aria-label="Prenota il tuo pane">
+        🛒 Prenota ora
+      </a>
+
+      <button class="navbar__burger"
+              aria-label="Apri menu di navigazione"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu mobile -->
+  <nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
+    <a href="index.html">🏠 Home</a>
+    <a href="punti-vendita.html">📍 Punti Vendita & Orari</a>
+    <a href="prenota.html">🛒 Prenota il tuo Pane</a>
+    <a href="contatti.html">✉️ Contatti</a>
+  </nav>
+
+
+  <main>
+
+    <!-- ════════════════════════
+         HERO
+    ════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__content">
+
+        <p class="hero__eyebrow">Orsogna, Abruzzo</p>
+
+        <h1 class="hero__title" id="hero-title">
+          Il pane di una volta,<br>
+          <em>ogni giorno</em>
+        </h1>
+
+        <p class="hero__subtitle">
+          Tre generazioni di passione artigianale nel cuore d'Abruzzo.
+          Farina selezionata, lievitazione naturale, forno a legna.
+          Il pane che sa ancora di casa.
+        </p>
+
+        <div class="hero__actions">
+          <a href="prenota.html" class="btn-primary">🛒 Prenota il tuo pane</a>
+          <a href="punti-vendita.html" class="btn-outline">📍 Trovaci</a>
+        </div>
+
+        <div style="margin-top: 2rem;">
+          <div class="hero__badge">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            Aperto oggi — 3 punti vendita sul territorio
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        ↓ &nbsp; Scopri di più
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════
+         STORIA
+    ════════════════════════ -->
+    <section class="story" aria-labelledby="story-title">
+      <div class="container">
+        <div class="story__grid">
+
+          <!-- Visual / foto -->
+          <div class="story__visual fade-up" aria-hidden="true">
+            <div class="story__img-placeholder">
+              <img src="assets/img/famiglia-tenaglia.jpg" alt="Il forno del Panificio Tenaglia" loading="lazy" />
+            </div>
+            <div class="story__stat-card">
+              <strong>40+</strong>
+              <span>anni di forno</span>
+            </div>
+          </div>
+
+          <!-- Testo -->
+          <div class="story__text fade-up">
+            <p class="section-label">La nostra storia</p>
+            <h2 class="section-title" id="story-title">
+              Artigiani del pane,<br>non semplici fornai
+            </h2>
+            <blockquote class="story__quote">
+              "Il pane buono non si fa in fretta. Si fa con cura, con tempo, con rispetto per la tradizione."
+            </blockquote>
+            <p class="story__body">
+              Il Panificio Tenaglia nasce da una passione di famiglia che si tramanda da decenni.
+              Ogni mattina, prima dell'alba, il nostro forno si accende per offrire ai clienti
+              il pane più fresco possibile: crosta dorata e croccante, mollica soffice e profumata.
+            </p>
+            <p class="story__body">
+              Usiamo farine di qualità, privilegiamo la lievitazione lenta e naturale, e seguiamo
+              le ricette tradizionali abruzzesi che hanno reso il nostro pane riconoscibile
+              tra tutti.
+            </p>
+            <a href="contatti.html" class="btn-outline" style="margin-top: 0.5rem; align-self: flex-start;">
+              Scrivici
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════
+         GALLERIA PRODOTTI
+    ════════════════════════ -->
+    <section class="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+
+        <div class="gallery__header fade-up">
+          <p class="section-label">I nostri prodotti</p>
+          <h2 class="section-title" id="gallery-title">
+            Dal forno alla tua tavola
+          </h2>
+        </div>
+
+        <div class="gallery__grid" role="list">
+
+          <div class="gallery__item fade-up" role="listitem">
+            <img src="assets/img/pane-casereccio.jpg" alt="Pane casereccio del Panificio Tenaglia" class="gallery__item-img" />
+            <span class="gallery__item-label">Pane Casereccio</span>
+          </div>
+
+          <div class="gallery__item fade-up" role="listitem">
+            <img src="assets/img/filone.jpg" alt="Filone del Panificio Tenaglia" class="gallery__item-img" />
+            <span class="gallery__item-label">Filone Abruzzese</span>
+          </div>
+
+          <div class="gallery__item fade-up" role="listitem">
+            <img src="assets/img/maritozzo.jpg" alt="Maritozzi del Panificio Tenaglia" class="gallery__item-img" />
+            <span class="gallery__item-label">Cornetti e Dolci</span>
+          </div>
+
+          <div class="gallery__item fade-up" role="listitem">
+            <img src="assets/img/pane-ai-cereali.jpg" alt="Pane ai cereali del Panificio Tenaglia" class="gallery__item-img" />
+            <span class="gallery__item-label">Pane ai Cereali</span>
+          </div>
+
+          <div class="gallery__item fade-up" role="listitem">
+            <img src="assets/img/parrozzo.jpg" alt="Parrozzo del Panificio Tenaglia" class="gallery__item-img" />
+            <span class="gallery__item-label">Prodotti Speciali</span>
+          </div>
+
+    </section>
+
+
+    <!-- ════════════════════════
+         SEDI PREVIEW
+    ════════════════════════ -->
+    <section class="sedi-preview" aria-labelledby="sedi-title">
+      <div class="container">
+
+        <p class="section-label fade-up">Dove trovarci</p>
+        <h2 class="section-title fade-up" id="sedi-title">
+          Tre punti vendita,<br>
+          un'unica qualità
+        </h2>
+        <p class="sedi-preview__subtitle fade-up">
+          Che tu sia ad Orsogna o nei dintorni, c'è sempre un Panificio Tenaglia vicino a te.
+        </p>
+
+        <div class="sedi__grid" role="list">
+
+          <!-- SEDE 1 — attiva -->
+          <article class="sede-card fade-up" role="listitem">
+            <div class="sede-card__num" aria-label="Sede 1">1</div>
+            <div class="sede-card__info">
+              <h3 class="sede-card__name">Orsogna — Sede Principale</h3>
+              <address class="sede-card__address" style="font-style: normal;">
+                Via Raffaele Paolucci, 7<br>
+                66036 Orsogna (CH)
+              </address>
+            </div>
+            <span class="sede-card__badge aperta" aria-label="Sede aperta">Aperta</span>
+          </article>
+
+          <!-- SEDE 2 — prossimamente -->
+          <article class="sede-card coming-soon fade-up" role="listitem">
+            <div class="sede-card__num" aria-label="Sede 2">2</div>
+            <div class="sede-card__info">
+              <h3 class="sede-card__name">Seconda Sede</h3>
+              <address class="sede-card__address" style="font-style: normal;">
+                <!-- AGGIORNARE con indirizzo reale -->
+                In arrivo…
+              </address>
+            </div>
+            <span class="sede-card__badge presto" aria-label="Prossimamente">Presto</span>
+          </article>
+
+          <!-- SEDE 3 — prossimamente -->
+          <article class="sede-card coming-soon fade-up" role="listitem" aria-label="Terza sede, prossimamente">
+            <div class="sede-card__num" aria-hidden="true">3</div>
+            <div class="sede-card__info">
+              <h3 class="sede-card__name">Terza Sede</h3>
+              <address class="sede-card__address" style="font-style: normal;">
+                In arrivo…
+              </address>
+            </div>
+            <span class="sede-card__badge presto" aria-label="Prossimamente">Presto</span>
+          </article>
+
+        </div>
+
+        <div class="sedi-preview__cta fade-up">
+          <a href="punti-vendita.html" class="btn-primary" style="margin-top:0.5rem;">
+            📍 Orari e mappa completa
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════
+         CTA PRENOTAZIONE
+    ════════════════════════ -->
+    <section class="prenota-cta" aria-labelledby="prenota-title">
+      <div class="container">
+        <div class="prenota-cta__inner fade-up">
+          <div class="prenota-cta__icon" aria-hidden="true">🛒</div>
+          <h2 class="prenota-cta__title" id="prenota-title">
+            Prenota il pane per domani,<br>senza sorprese
+          </h2>
+          <p class="prenota-cta__sub">
+            Compila il modulo di prenotazione e riceverai la conferma direttamente
+            sul tuo telefono. Niente file, niente attese, niente delusioni.
+          </p>
+          <div class="prenota-cta__actions">
+            <a href="prenota.html" class="btn-primary">Prenota ora 🛒</a>
+            <a href="punti-vendita.html" class="btn-outline">
+              Vedi orari 🕐
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ════════════════════════
+       FOOTER
+  ════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div>
+          <p class="footer__brand-name">Panificio Tenaglia</p>
+          <p class="footer__brand-tagline">
+            Pane artigianale dal cuore dell'Abruzzo.
+            Farina, acqua, lievito e passione — ogni giorno, dal mattino.
+          </p>
+        </div>
+
+        <!-- Navigazione -->
+        <div>
+          <p class="footer__col-title">Navigazione</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="punti-vendita.html">Punti Vendita & Orari</a></li>
+            <li><a href="prenota.html">Prenota il Pane</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </div>
+
+        <!-- Contatti rapidi -->
+        <div>
+          <p class="footer__col-title">Contatti rapidi</p>
+          <ul class="footer__links" role="list">
+            <li>
+              <a href="https://wa.me/393406169211" target="_blank" rel="noopener noreferrer"
+                 aria-label="Contatta via WhatsApp">
+                💬 WhatsApp
+              </a>
+            </li>
+            <li>
+              <a href="tel:+393406169211" aria-label="Chiama il Panificio Tenaglia">
+                📞 340 616 9211
+              </a>
+            </li>
+            <li><a href="contatti.html">✉️ Modulo di contatto</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 Panificio Tenaglia — Orsogna (CH)</p>
+        <!-- <p>Sito realizzato con ❤️ da Rossella Amicosante — Corso Web Design 2025/26</p> -->
+        <p>Questo sito non utilizza cookie né raccoglie dati personali in modo automatico.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+
+</body>
+</html>
